@@ -14,7 +14,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    fetch("http://swapi.co/api")
+    fetch("http://swapi.co/api/")
       .then(res => res.json())
       .then(categories => this.setState({ categories }));
   }

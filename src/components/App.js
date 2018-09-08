@@ -5,6 +5,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import Nav from "./Nav";
 import Home from "./Home";
 import CategoryItems from "./CategoryItems";
+import ItemDetail from "./ItemDetail";
 
 class App extends Component {
   render() {
@@ -16,8 +17,15 @@ class App extends Component {
             <Nav />
             <Switch>
               <Route path="/" component={Home} exact />
-              <Route path="/category/:category" component={CategoryItems} />
-              {/* <Route component={Error}> */}
+              <Route
+                path="/category/:category"
+                component={CategoryItems}
+                exact
+              />
+              <Route
+                path="/category/:category/:name/:id"
+                component={ItemDetail}
+              />
             </Switch>
           </div>
         </BrowserRouter>
